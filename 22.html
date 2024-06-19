@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MY FIRST WEB PAGE</title>
+    <style>
+       
+        h1 {
+            color:White;
+            font-family:'Lucida Handwriting';
+            text-align:left;
+        color:Green;
+        text-shadow: 1px 1px 2px black, 0 0 25px White, 0 0 purple;
+}
+
+body {
+  width: 500px;
+  margin: 0 auto;
+  padding: 50px;
+  float: right;
+
+}
+
+div.elem-group {
+  margin: 20px 0;
+}
+
+div.elem-group.inlined {
+  width: 49%;
+  display: inline-block;
+  float: left;
+  margin-left: 1%;
+}
+
+label {
+  color: Black;
+  display: block;
+  font-family: 'Nanum Gothic';
+  padding-bottom: 10px;
+  font-size: 1.25em;
+}
+
+input, select, textarea {
+  border-radius: 5px;
+  border: 2px solid #777;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  width: 100%;
+  padding: 10px;
+}
+
+div.elem-group.inlined input {
+  width: 95%;
+  display: inline-block;
+}
+
+textarea {
+  height: 250px;
+}
+
+hr {
+  border: 1px dotted #ccc;
+}
+
+
+body {
+            background-image: url('https://img.freepik.com/free-photo/delicious-pizza-indoors_23-2150901027.jpg');
+            
+min-height: 480px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+
+
+}
+       
+
+button {
+  
+  height: 50px;
+  background:Green;
+  border: none;
+  color: white;
+  font-size: 1.25em;
+  font-family: 'Nanum Gothic';
+  border-radius: 4px;
+  cursor: pointer;
+  align:middle;
+}
+
+button:hover {
+  border: 2px solid Grey;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+
+<h1> <b> <u>TABLE BOOKING </u></b> </h1>
+
+<form action="reservation.php" method="post">
+  <div class="elem-group">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="visitor_name"  placeholder="Enter your name here."pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail:</label>
+    <input type="email" id="email" name="visitor_email" placeholder="Enter your e-mail id here." required>
+  </div>
+  <div class="elem-group">
+    <label for="phone">Your Phone:</label>
+    <input type="tel" id="phone" name="visitor_phone"  placeholder="Enter your phone number." pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+  </div>
+  <hr>
+  <div class="elem-group inlined">
+    <label for="adult">No.of Members:</label>
+    <input type="number" id="adult" name="total_adults" placeholder="Enter no.of.memebers." min="1" required>
+  </div>
+
+    <div class="elem-group inlined">
+    <label for="checkin-date">Check-in Date:</label>
+    <input type="date" id="checkin-date" name="checkin" required>
+  </div>
+
+  <div class="elem-group">
+    <label for="room-selection">Select Table Preference:</label>
+    <select id="room-selection" name="room_preference" "placeholder="Choose a Table from the List"required>
+        <option value="placeholder">Choose a Table from the List</option>
+        <option value="connecting">In AC Compartment</option>
+        <option value="adjoining">In NON-AC Compartment</option>
+    </select>
+  </div>
+  <hr>
+  <div class="elem-group">
+    <label for="message">Anything Else?</label>
+    <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+  </div>
+  <button type="submit">Book The Table</button>
+</form>
+</body>
+</html>
